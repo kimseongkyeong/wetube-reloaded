@@ -1,3 +1,9 @@
 extends base.pug
+include mixins/video
+
 block content 
     h1 home
+    each val in videos
+        +videos(val)
+    else 
+        noting
